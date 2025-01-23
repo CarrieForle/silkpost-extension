@@ -1,1 +1,1 @@
-Compress-Archive hash.js, LICENSE, manifest.json, new_reddit.js, old_reddit.js, README.md, variables.js, icons, screenshots dist/silkpost-extension.zip -Update
+Compress-Archive hash.js, LICENSE, manifest.json, new_reddit.js, old_reddit.js, README.md, variables.js, icons dist/silkpost-extension.zip -Update
