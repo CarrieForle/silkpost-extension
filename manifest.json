@@ -3,7 +3,7 @@
     "manifest_version": 3,
     "name": "Silksong.exe",
     "description": "Change every post with Silkpost flair to other flairs on r/Silksong",
-    
+
     "icons": {
         "32": "icons/icon.png"
     },
@@ -25,5 +25,12 @@
             "js": [ "hash.js", "variables.js", "old_reddit.js" ],
             "run_at": "document_end"
         }
-    ]
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{2973c0e7-0685-476d-a5bd-0f14c1e0ecd0}",
+            "strict_min_version": "121"
+        }
+    }
 }
