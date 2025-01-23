@@ -4,11 +4,11 @@ Change every post with Silkpost flair to other flairs on [r/Silksong](https://ww
 
 Before:
 
-![Screenshot of r/Silksong before installation](screenshots/before.jpg)
+![Screenshot of r/Silksong before installation](screenshots/before.png)
 
 After:
 
-![Screenshot of r/Silksong before installation](screenshots/after.jpg)
+![Screenshot of r/Silksong before installation](screenshots/after.png)
 
 ## Features
 
