@@ -2,14 +2,23 @@
 
 function updateFlairs() {
   // manually escape ':' because encodeURI does not
-  const flairSelector = `shreddit-post-flair:has(a[href="/r/Silksong/?f=${encodeURIComponent(`flair_name:"${SILKPOST_FLAIR.name}"`)}"])`;
-  console.log(flairSelector);
+  const flairSelector = `shreddit-post-flair:has(a[href="/r/Silksong/?f=${encodeURIComponent(`flair_name:"${SILKPOST_FLAIR.name}"`)}"]):not([x-silkpost-flair])`;
 
   const flairs = document.querySelectorAll(flairSelector);
 
   for (const flair of flairs) {
-    const targetFlair = TARGET_FLAIRS.choose(cyrb53(getPostTitle(flair).trim()));
+    const title = getPostTitle(flair);
 
+    let targetFlair = SILKPOST_FLAIR;
+
+    if (title) {
+      targetFlair = TARGET_FLAIRS.choose(cyrb53(title));
+
+      if (targetFlair === SILKPOST_FLAIR) {
+        flair.setAttribute("x-silkpost-flair", "");
+      }
+    }
+    
     const a = flair.querySelector("a");
     a.href = `/r/Silksong/?f=${encodeURIComponent(`flair_name:"${targetFlair.name}"`)}`;
 
@@ -35,9 +44,12 @@ function buildContent(parent, content) {
   parent.append(content.slice(startIndex));
 }
 
+// Nullable
 function getPostTitle(flairElem) {
-  let elem = flairElem.parentElement.querySelector("[aria-describedby]");
-  return elem.textContent;
+  const postId = flairElem.getAttribute("post-id");
+  let elem = document.getElementById(`post-title-${postId}`)
+
+  return elem?.textContent?.trim();
 }
 
 function getFaceplateImg(emoji) {
@@ -62,6 +74,7 @@ try {
   // Update flair on infinite scrolling feed
   observer.observe(document.querySelector("shreddit-feed"), {
     childList: true,
+    subTree: true,
   });
 } catch (e) {
 
