@@ -20,6 +20,12 @@ After:
 - Get Silksong hypes every day
 - Get hopium
 
+## Install
+
+It's not on any extension store at the moment. You need to do a manual installation.
+
+Download the latest [`silkpost-extension.zip`](https://github.com/CarrieForle/silkpost-extension/releases/latest) from Release page.
+
 ## Disclaimer
 
 This project **is not affiliated to Team Cherry, nor is affiliated to r/Silksong modteams**.
