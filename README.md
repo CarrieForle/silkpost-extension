@@ -2,6 +2,8 @@
 
 Change every post with Silkpost flair to other flairs on [r/Silksong](https://www.reddit.com/r/Silksong/)
 
+[Thanks for u/Multifruit256 for the idea.](https://www.reddit.com/r/Silksong/comments/1i7bb4h/we_should_make_a_computer_virus_called/)
+
 Before:
 
 ![Screenshot of r/Silksong before installation](screenshots/before.png)
