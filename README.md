@@ -22,9 +22,31 @@ After:
 
 ## Install
 
-It's not on any extension store at the moment. You need to do a manual installation.
+It's not on any extension store at the moment, and probably would never be on Chrome Web Store as I don't have developer account and I have to pay $5 to be one. You need to do a manual installation. 
 
-Download the latest [`silkpost-extension.zip`](https://github.com/CarrieForle/silkpost-extension/releases/latest) from Release page.
+### Firefox
+
+Download the latest [`silkpost-extension.zip`](https://github.com/CarrieForle/silkpost-extension/releases/latest) from Release page. Unzip it.
+
+Go to [about:debugging](about:debugging) and click "This Firefox" on the left.
+
+Click "Load Temporary Add-on" and select ANY file from the extension folder.
+
+![Firefox screenshot](screenshots/firefox.png)
+
+The extension is now loaded. Note that Firefox will remove the extension after you close it.
+
+### Edge
+
+Download the latest [`silkpost-extension.zip`](https://github.com/CarrieForle/silkpost-extension/releases/latest) from Release page. Unzip it.
+
+Go to [edge://extensions/](edge://extensions/) and turn on "Developer mode" on the left panel.
+
+Click "Load unpacked" and select the extension folder.
+
+![Edge screenshot](screenshots/edge.png)
+
+The extension is now loaded.
 
 ## Disclaimer
 
