@@ -1,7 +1,6 @@
 "use strict";
 
 function updateFlairs() {
-  console.log("update silkpost")
   const flairs = document.querySelectorAll(".linkflairlabel");
 
   for (const flair of flairs) {
@@ -45,7 +44,6 @@ function buildFlairFrom(elem, flair) {
 
 function getPostTitle(flairElem) {
   const elem = flairElem.parentElement.querySelector("a");
-  console.log(elem.textContent);
 
   return elem.textContent;
 }

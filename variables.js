@@ -18,7 +18,6 @@ const TARGET_FLAIRS = [
 
 TARGET_FLAIRS.choose = (digest) => {
   const dice = digest % 100;
-  console.log(dice);
 
   if (dice < 10) {
     return TARGET_FLAIRS[0]
