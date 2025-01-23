@@ -22,19 +22,11 @@ After:
 
 ## Install
 
-It's not on any extension store at the moment, and probably would never be on Chrome Web Store as I don't have developer account and I have to pay $5 to be one. You need to do a manual installation. 
+It's only available on Firefox at the moment. However it should also be working on Chromium browsers, but it would probably never be on Chrome Web Store as I don't have developer account and I have to pay $5 to be one. I am waiting for Edge's approval at this point. Before this happens you need to do a manual installation. 
 
 ### Firefox
 
-Download the latest [`silkpost-extension.zip`](https://github.com/CarrieForle/silkpost-extension/releases/latest) from Release page. Unzip it.
-
-Go to [about:debugging](about:debugging) and click "This Firefox" on the left.
-
-Click "Load Temporary Add-on" and select ANY file from the extension folder.
-
-![Firefox screenshot](screenshots/firefox.png)
-
-The extension is now loaded. Note that Firefox will remove the extension after you close it.
+https://addons.mozilla.org/en-GB/firefox/addon/silksong-exe/
 
 ### Edge
 
