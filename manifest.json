@@ -1,0 +1,26 @@
+{
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "name": "Silksong.exe",
+    "description": "Change every posts with flair 'Silkpost' to others on r/Silksong",
+    "icon": "icons/icon.png",
+
+    "developer": {
+        "name": "CarrieForle"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ 
+                "*://new.reddit.com/*", 
+                "*://www.reddit.com/*"
+            ],
+            "js": [ "hash.js", "variables.js", "new_reddit.js" ],
+            "run_at": "document_end"
+        }, {
+            "matches": [ "*://old.reddit.com/*" ],
+            "js": [ "hash.js", "variables.js", "old_reddit.js" ],
+            "run_at": "document_end"
+        }
+    ]
+}
