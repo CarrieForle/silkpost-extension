@@ -81,7 +81,6 @@ const appObserver = new MutationObserver(() => {
   if (feed) {
     feedObserver.observe(feed, {
       childList: true,
-      // subtree: true,
     });
   }
 });
