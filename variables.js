@@ -21,8 +21,7 @@ TARGET_FLAIRS.choose = (digest) => {
 
   if (dice < 10) {
     return TARGET_FLAIRS[0];
-  }
-  else if (dice < 60) {
+  } else if (dice < 60) {
     return TARGET_FLAIRS[1];
   } else if (dice < 85) {
     return TARGET_FLAIRS[2];
