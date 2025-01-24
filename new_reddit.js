@@ -66,23 +66,28 @@ function getFaceplateImg(emoji) {
 
 updateFlairs();
 
-const observer = new MutationObserver(updateFlairs);
+let feedObserver = new MutationObserver(updateFlairs);
+const appObserver = new MutationObserver(() => {
+  updateFlairs();
 
-
-// Feed does not exist in search, but shreddit-app updates in this scenario
-try {
+  // Instantiate a new one every app changes because feed is app's descendent
+  feedObserver.disconnect();
+  feedObserver = new MutationObserver(updateFlairs);
+  
+  // Feed does not exist in search, but shreddit-app updates in this scenario
   // Update flair on infinite scrolling feed
-  observer.observe(document.querySelector("shreddit-feed"), {
-    childList: true,
-    subTree: true,
-  });
-} catch (e) {
-
-}
+  const feed = document.querySelector("shreddit-feed");
+  
+  if (feed) {
+    feedObserver.observe(feed, {
+      childList: true,
+      // subtree: true,
+    });
+  }
+});
 
 // Update flair on various SPA change
-observer.observe(document.querySelector("shreddit-app"), {
+appObserver.observe(document.querySelector("shreddit-app"), {
   childList: true,
   attributes: true,
-  attributeFilter: [ "referrer" ],
 });
