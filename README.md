@@ -26,7 +26,7 @@ It's only available on Firefox at the moment. However it should also be working 
 
 ### Firefox
 
-https://addons.mozilla.org/en-GB/firefox/addon/silksong-exe/
+https://addons.mozilla.org/firefox/addon/silkpost-extension/
 
 ### Edge
 
