@@ -20,7 +20,7 @@ TARGET_FLAIRS.choose = (digest) => {
   const dice = digest % 100;
 
   if (dice < 10) {
-    return TARGET_FLAIRS[0]
+    return TARGET_FLAIRS[0];
   }
   else if (dice < 60) {
     return TARGET_FLAIRS[1];
@@ -37,6 +37,6 @@ TARGET_FLAIRS.choose = (digest) => {
 const EMOJIS = new Map();
 EMOJIS.set("scream-hornet", "https://emoji.redditmedia.com/1a4og3ejz8kb1_t5_4viev2/scream-hornet");
 EMOJIS.set("angy", "https://emoji.redditmedia.com/nzujdvrwz8kb1_t5_4viev2/angy");
-EMOJIS.set("clown", "https://emoji.redditmedia.com/fc7ip9dqz8kb1_t5_4viev2/clown")
+EMOJIS.set("clown", "https://emoji.redditmedia.com/fc7ip9dqz8kb1_t5_4viev2/clown");
 EMOJIS.set("chad-hornet", "https://emoji.redditmedia.com/5804v8gyz8kb1_t5_4viev2/chad-hornet");
 EMOJIS.set("troll", "https://emoji.redditmedia.com/mngg5jtrxdkb1_t5_4viev2/troll");
