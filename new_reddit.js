@@ -1,7 +1,6 @@
 "use strict";
 
 function updateFlairs() {
-  // manually escape ':' because encodeURI does not
   const flairSelector = `shreddit-post-flair:has(a[href="/r/Silksong/?f=${encodeURIComponent(`flair_name:"${SILKPOST_FLAIR.name}"`)}"]):not([x-silkpost-flair])`;
 
   const flairs = document.querySelectorAll(flairSelector);
